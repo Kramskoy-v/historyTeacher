@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
+import ButtonLink from '../ui/ButtonLink';
 
 const glitch = keyframes`
   2%, 64% {
@@ -80,7 +81,7 @@ function NotFound() {
     <Wrapper>
       <Title>404</Title>
       <p>Страница не найдена</p>
-      <Link to="/home">На главную</Link>
+      <ButtonLink to="/home">На главную</ButtonLink>
     </Wrapper>
   );
 }

@@ -1,12 +1,12 @@
-import Accordion from '../features/Accordion/Accordion';
+import QuestionsList from '../features/questions/QuestionsList';
 import SectionTitle from '../ui/SectionTitle';
 
 function Questions() {
   return (
-    <div>
+    <>
       <SectionTitle content="Вопросы и ответы" />
-      <Accordion />
-    </div>
+      <QuestionsList />
+    </>
   );
 }
 

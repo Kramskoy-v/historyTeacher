@@ -1,14 +1,82 @@
+import styled from 'styled-components';
+import FlexBox from '../ui/FlexBox';
 import SectionTitle from '../ui/SectionTitle';
+import ContactTitle from '../ui/ContactTitle';
+import ContactMap from '../features/contacts/ContactMap';
+import MailerForm from '../features/contacts/MailerForm';
+
+const GridBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  address,
+  p {
+    font-style: normal;
+    color: var(--color-gray-white);
+  }
+  a {
+    transition: all 0.3s;
+    &:hover {
+      color: var(--color-light-red);
+    }
+  }
+`;
 
 function Contacts() {
   return (
-    <div>
+    <>
       <SectionTitle content="Контакты" />
-      Contacts Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Recusandae voluptates accusamus omnis error? Facilis architecto laudantium
-      asperiores. Officia amet atque veniam, porro iure corrupti, dolores rerum,
-      maiores fugiat ratione dolorum! вшм
-    </div>
+      <FlexBox src="contacts.jpg" alt="Блокнот и шариковая ручка">
+        <p>
+          Алиса немного удивилась этому, но она слишком трепетала перед
+          Королевой, чтобы не поверить этому. «Попробую, когда пойду домой, —
+          подумала она про себя, — когда в следующий раз немного опоздаю к
+          ужину». Говоря это, она довольно робко взглянула на настоящую
+          Королеву, но ее спутник лишь приятно улыбнулся. и сказал: «С этим
+          легко справиться». Если хочешь, ты можешь стать пешкой Белой Королевы,
+          поскольку Лили слишком молода, чтобы играть; и ты для начала на Втором
+          квадрате: когда доберешься до Восьмого квадрата, ты будешь Королевой –
+          «Как раз в этот момент, так или иначе, они начали бежать
+        </p>
+      </FlexBox>
+      <GridBox>
+        <div>
+          <ContactTitle title="Адрес и телефон" />
+          <ContactMap />
+
+          <address>
+            394088, город Воронеж, <br />
+            улица Беговая, 146​
+          </address>
+          <div>
+            <p>Телефон:&nbsp;&nbsp;+7 (473) 266‒09‒14</p>
+            <p>
+              Электронная почта:&nbsp;&nbsp;
+              <a href="mailto:ivanhotepp@gmail.com">ivanhotepp@gmail.com</a>
+            </p>
+            <p>
+              Сайт:&nbsp;&nbsp;
+              <a
+                href="http://gimnaz1.obrvrn.ru"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                gimnaz1.obrvrn.ru
+              </a>
+            </p>
+          </div>
+        </div>
+        <div>
+          <ContactTitle title="Форма связи" />
+          <MailerForm />
+        </div>
+      </GridBox>
+    </>
   );
 }
 

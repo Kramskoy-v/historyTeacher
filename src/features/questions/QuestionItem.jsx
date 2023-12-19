@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledAccordionItem = styled.li`
+const StyledQuestionItem = styled.li`
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
@@ -15,7 +15,7 @@ const StyledAccordionItem = styled.li`
   cursor: pointer;
 
   h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
   }
 
@@ -28,18 +28,16 @@ const StyledNumber = styled.p`
   font-size: 30px;
   font-weight: 500;
   align-self: flex-start;
-  color: ${(props) =>
-    props.isopen === 'true' ? 'var(--color-light-red)' : 'var(--color-white)'};
 `;
 
 const ContentBox = styled.p`
   grid-column: 2 / -1;
   padding-bottom: 16px;
-  line-height: 1.6;
-  font-size: 18px;
+  line-height: 1.8;
+  font-size: 16px;
 `;
 
-const AccordionItem = ({ num, title, text, curOpen, onOpen }) => {
+const QuestionItem = ({ num, title, text, curOpen, onOpen }) => {
   const isOpen = num === curOpen;
 
   const handleToggle = () => {
@@ -47,15 +45,12 @@ const AccordionItem = ({ num, title, text, curOpen, onOpen }) => {
   };
 
   return (
-    <StyledAccordionItem isopen={isOpen.toString()} onClick={handleToggle}>
-      <StyledNumber isopen={isOpen.toString()}>
-        {num < 9 ? `0${num + 1}` : num + 1}
-      </StyledNumber>
+    <StyledQuestionItem isopen={isOpen.toString()} onClick={handleToggle}>
+      <StyledNumber>{num < 9 ? `0${num + 1}` : num + 1}</StyledNumber>
       <h3>{title}</h3>
       <span>{isOpen ? '-' : '+'}</span>
       {isOpen && <ContentBox>{text}</ContentBox>}
-    </StyledAccordionItem>
+    </StyledQuestionItem>
   );
 };
-
-export default AccordionItem;
+export default QuestionItem;

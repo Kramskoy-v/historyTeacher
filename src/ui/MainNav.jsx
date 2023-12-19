@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const StyledMainNav = styled.nav`
   margin-bottom: 50px;
-  li {
-    &:not(:last-child) {
-      margin-bottom: 17px;
-    }
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
   }
 `;
 

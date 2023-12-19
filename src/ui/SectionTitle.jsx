@@ -7,7 +7,7 @@ const StyledSectionTitle = styled.h1`
   margin-bottom: 25px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   position: relative;
 
   &::after {

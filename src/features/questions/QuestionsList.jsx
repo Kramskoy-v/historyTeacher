@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import AccordionItem from './AccordionItem';
+import QuestionItem from './QuestionItem';
 
 const faqs = [
   {
@@ -57,19 +57,19 @@ const faqs = [
   },
 ];
 
-const StyledAccordion = styled.ul`
+const StyledQuestionsList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  row-gap: 25px;
 `;
 
-function Accordion() {
+function QuestionsList() {
   const [curOpen, setCurOpen] = useState(0);
 
   return (
-    <StyledAccordion>
+    <StyledQuestionsList>
       {faqs.map((item, num) => (
-        <AccordionItem
+        <QuestionItem
           key={item.id}
           num={num}
           title={item.title}
@@ -78,8 +78,8 @@ function Accordion() {
           text={item.text}
         />
       ))}
-    </StyledAccordion>
+    </StyledQuestionsList>
   );
 }
 
-export default Accordion;
+export default QuestionsList;

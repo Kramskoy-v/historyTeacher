@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BackgroundAnimation from '../ui/BackgroundAnimation';
 
 const StyledHomePage = styled.div`
   display: flex;
@@ -33,9 +34,10 @@ function Home() {
         <br />Я учитель истории
       </Title>
       <Description>
-        Что-то из разряда: здесь мои методические разработки, инфа обо мне и
-        бла-бла-бла
+        Что-то из разряда: здесь мои методические разработки,
+        <br /> инфа обо мне и бла-бла-бла
       </Description>
+      <BackgroundAnimation />
     </StyledHomePage>
   );
 }

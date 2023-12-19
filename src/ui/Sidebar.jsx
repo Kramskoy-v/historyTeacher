@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import MainNav from './MainNav';
+import SocialLinks from '../pages/SocialLinks';
 
 const StyledSidebar = styled.aside`
   height: max-content;
@@ -15,6 +16,7 @@ function Sidebar() {
   return (
     <StyledSidebar>
       <MainNav />
+      <SocialLinks />
     </StyledSidebar>
   );
 }

@@ -2,23 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 :root {
-  /* Indigo */
   --color-dark: #252525;
   --color-white:  #f7f7f7;
   --color-gray-white: #d0d0d0;
   --color-gray: #5c5c5c;
-  --color-light-red: #f88181;
-
-  --backdrop-color: rgba(255, 255, 255, 0.1);
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12);
-
-  --border-radius-tiny: 3px;
-  --border-radius-sm: 5px;
-  --border-radius-md: 7px;
-  --border-radius-lg: 9px;
+  --color-dark-gray: #444;
+  --color-light-red: #da2c2c;
 }
 
 *,
@@ -27,9 +16,6 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
-  /* Creating animations for dark mode */
-  transition: background-color 0.3s, border 0.3s;
 }
 
 html {
@@ -47,7 +33,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #573414;
+  background-color:  var(--color-gray);
 }
 
 input,

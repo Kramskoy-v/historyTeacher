@@ -11,7 +11,7 @@ import Login from './pages/Login';
 import AppLayout from './ui/AppLayout';
 import Home from './pages/Home';
 import Information from './pages/Information';
-import MethodDevList from './pages/MethodDevList';
+import MethodDevList from './pages/MethodDev';
 import MethodDevSingle from './pages/MethodDevSingle';
 import Questions from './pages/Questions';
 import Contacts from './pages/Contacts';

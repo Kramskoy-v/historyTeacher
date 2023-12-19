@@ -36,6 +36,7 @@ const Container = styled.div`
   padding: 40px 35px;
   display: flex;
   flex-direction: column;
+  row-gap: 30px;
   background-color: var(--color-dark);
 `;
 
