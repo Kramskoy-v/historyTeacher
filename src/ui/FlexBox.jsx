@@ -2,21 +2,28 @@ import styled from 'styled-components';
 
 const StyledFlexBox = styled.div`
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  column-gap: 30px;
 `;
 
 const Photo = styled.div`
   width: 285px;
   height: 285px;
-  margin-right: 30px;
   overflow: hidden;
   flex-shrink: 0;
+  img {
+    width: 285px;
+    height: 285px;
+    object-fit: cover;
+  }
 `;
 
 const ContentBox = styled.div`
+  width: 100%;
+
   p {
     line-height: 1.75;
-    color: var(--color-gray-white);
+    color: var(--color-grey-white);
   }
   h2,
   h3 {

@@ -4,10 +4,10 @@ const GlobalStyles = createGlobalStyle`
 :root {
   --color-dark: #252525;
   --color-white:  #f7f7f7;
-  --color-gray-white: #d0d0d0;
-  --color-gray: #5c5c5c;
-  --color-dark-gray: #444;
-  --color-light-red: #da2c2c;
+  --color-grey-white: #d0d0d0;
+  --color-grey: #5c5c5c;
+  --color-dark-grey: #444;
+  --color-red: #da2c2c;
 }
 
 *,
@@ -24,7 +24,6 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: var(--color-white);
   transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;
   line-height: 1.5;
@@ -33,7 +32,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color:  var(--color-gray);
 }
 
 input,

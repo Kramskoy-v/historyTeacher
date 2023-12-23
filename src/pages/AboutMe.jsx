@@ -10,7 +10,7 @@ const Experience = styled.ul`
   flex-direction: column;
   row-gap: 15px;
   li {
-    color: var(--color-gray-white);
+    color: var(--color-grey-white);
     padding-left: 10px;
   }
 `;

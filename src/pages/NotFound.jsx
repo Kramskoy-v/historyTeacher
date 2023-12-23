@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: 0;
   font-family: 'Share Tech Mono', monospace;
-  background: #131313;
+  background: var(--color-dark);
 
   p {
     font-size: 6rem;

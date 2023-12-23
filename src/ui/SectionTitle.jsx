@@ -17,7 +17,7 @@ const StyledSectionTitle = styled.h1`
     left: 0;
     width: 50px;
     height: 2px;
-    background-color: #444;
+    background-color: var(--color-dark-grey);
   }
 `;
 

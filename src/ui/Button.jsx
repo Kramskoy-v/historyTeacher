@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  width: min-content;
+  width: max-content;
+  height: max-content;
   background-color: var(--color-dark);
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--color-dark-grey);
   font-size: 13px;
   padding: 7px 15px;
-  color: var(--color-gray-white);
+  color: var(--color-grey-white);
   text-transform: uppercase;
+  transition: all 0.3s;
+
   &:hover {
-    border-color: var(--color-light-red);
-  }
-  &:active {
-    transform: scale(0.97);
+    border-color: var(--color-red);
   }
 `;
 

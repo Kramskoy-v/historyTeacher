@@ -32,32 +32,28 @@ const StyledNavLink = styled(NavLink)`
     transform: translateX(8px);
   }
   &.active {
-    transform: translateX(10px);
+    transform: translateX(12px);
   }
 `;
+
+const navLinks = [
+  { name: 'Главная', to: 'home' },
+  { name: 'Новости', to: 'news' },
+  { name: 'Метод разработки', to: 'methodic' },
+  { name: 'Вопросы и ответы', to: 'questions' },
+  { name: 'Обо мне', to: 'aboutme' },
+  { name: 'Контакты', to: 'contacts' },
+];
 
 function MainNav() {
   return (
     <StyledMainNav>
       <ul>
-        <li>
-          <StyledNavLink to="home">Главная</StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="info">Объявления</StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="methodological">Разработки</StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="questions">Вопросы и ответы</StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="aboutme">Обо мне</StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="contacts">Контакты</StyledNavLink>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.to}>
+            <StyledNavLink to={link.to}>{link.name}</StyledNavLink>
+          </li>
+        ))}
       </ul>
     </StyledMainNav>
   );

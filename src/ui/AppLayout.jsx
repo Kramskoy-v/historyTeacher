@@ -21,7 +21,7 @@ const Main = styled.main`
     border-radius: 10px;
     width: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: var(--color-gray-white);
+    background-color: var(--color-grey-white);
   }
   &::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);

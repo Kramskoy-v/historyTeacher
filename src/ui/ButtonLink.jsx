@@ -7,15 +7,13 @@ const StyledButtonLink = styled(Link)`
   margin-left: ${(props) => (props.mla ? 'auto' : 0)};
   padding: 7px 15px;
   background-color: var(--color-dark);
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--color-dark-grey);
   font-size: 13px;
-  color: var(--color-gray-white);
+  color: var(--color-grey-white);
   text-transform: uppercase;
+  transition: all 0.3s;
   &:hover {
-    border-color: var(--color-light-red);
-  }
-  &:active {
-    transform: scale(0.97);
+    border-color: var(--color-red);
   }
 `;
 

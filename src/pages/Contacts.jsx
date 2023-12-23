@@ -3,7 +3,9 @@ import FlexBox from '../ui/FlexBox';
 import SectionTitle from '../ui/SectionTitle';
 import ContactTitle from '../ui/ContactTitle';
 import ContactMap from '../features/contacts/ContactMap';
-import MailerForm from '../features/contacts/MailerForm';
+import FormFeedback from '../features/contacts/FormFeedback';
+import MessageList from '../features/contacts/MessageList';
+import { useUser } from '../features/authentication/useUser';
 
 const GridBox = styled.div`
   display: grid;
@@ -15,22 +17,24 @@ const GridBox = styled.div`
     row-gap: 40px;
   }
   address,
-  p {
+  > p {
     font-style: normal;
-    color: var(--color-gray-white);
+    color: var(--color-grey-white);
   }
   a {
     transition: all 0.3s;
     &:hover {
-      color: var(--color-light-red);
+      color: var(--color-red);
     }
   }
 `;
 
 function Contacts() {
+  const { isAuthenticated } = useUser();
   return (
     <>
       <SectionTitle content="Контакты" />
+      {isAuthenticated && <MessageList />}
       <FlexBox src="contacts.jpg" alt="Блокнот и шариковая ручка">
         <p>
           Алиса немного удивилась этому, но она слишком трепетала перед
@@ -73,7 +77,7 @@ function Contacts() {
         </div>
         <div>
           <ContactTitle title="Форма связи" />
-          <MailerForm />
+          <FormFeedback />
         </div>
       </GridBox>
     </>

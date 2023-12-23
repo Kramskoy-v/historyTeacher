@@ -1,40 +1,9 @@
 import styled from 'styled-components';
 
-const links = [
-  {
-    id: 'd45',
-    title: 'Вконтакте',
-    link: 'https://vk.com/ivan24645041',
-    icon: 'vk_icon.png',
-  },
-  {
-    id: 'd5',
-    title: 'Департаметнт образования',
-    link: 'https://google.com',
-    icon: 'dep_icon.png',
-  },
-  {
-    id: 'd4',
-    title: 'Бургер',
-    link: 'https://www.youtube.com',
-    icon: 'burger_icon.png',
-  },
-  {
-    id: 'qd45',
-    title: 'Веселый череп',
-    link: 'https://vk.com/ivan24645041',
-    icon: 'skull_icon.png',
-  },
-  {
-    id: 'de45',
-    title: 'Бургер кинг',
-    link: 'https://vk.com/ivan24645041',
-    icon: 'burger_icon.png',
-  },
-];
 const StyledSocialLinks = styled.ul`
   display: flex;
   column-gap: 10px;
+  margin-bottom: 20px;
 `;
 
 const SocialItem = styled.li`
@@ -58,7 +27,7 @@ const SocialItem = styled.li`
     padding: 3px 5px;
     border-radius: 5px;
     font-size: 10px;
-    background-color: var(--color-light-red);
+    background-color: var(--color-red);
   }
 
   &:hover {
@@ -68,6 +37,39 @@ const SocialItem = styled.li`
     }
   }
 `;
+
+const links = [
+  {
+    id: 'd45',
+    title: 'Вконтакте',
+    link: 'https://vk.com/ivan24645041',
+    icon: 'vk_icon.png',
+  },
+  {
+    id: 'd5',
+    title: 'Департамент образования',
+    link: 'https://google.com',
+    icon: 'dep_icon.png',
+  },
+  {
+    id: 'd4',
+    title: 'Бургер',
+    link: 'https://www.youtube.com',
+    icon: 'burger_icon.png',
+  },
+  {
+    id: 'qd45',
+    title: 'Веселый череп',
+    link: 'https://vk.com/ivan24645041',
+    icon: 'skull_icon.png',
+  },
+  {
+    id: 'de45',
+    title: 'Бургер кинг',
+    link: 'https://vk.com/ivan24645041',
+    icon: 'burger_icon.png',
+  },
+];
 
 function SocialLinks() {
   return (
