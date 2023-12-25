@@ -24,7 +24,7 @@ function FormFeedback() {
   const { mutate, isLoading } = useMutation({
     mutationFn: createFeedback,
     onSuccess: () => {
-      toast.success('Запись успешно добавлена');
+      toast.success('Сообщение успешно отправлено');
       queryClient.invalidateQueries({
         queryKey: ['feedback'],
       });
@@ -35,7 +35,7 @@ function FormFeedback() {
 
   const { register, handleSubmit, reset, formState } = useForm();
 
-  const { errors } = formState;
+  const { errors, isValid } = formState;
 
   const onQuestionSubmit = (data) => {
     mutate(data);
@@ -49,7 +49,7 @@ function FormFeedback() {
             type="text"
             disabled={isLoading}
             id="name"
-            placeholder="Ваше имя"
+            placeholder="имя"
             {...register('name', {
               required: 'Поле обязательное к заполнению',
             })}
@@ -57,10 +57,10 @@ function FormFeedback() {
         </FormRow>
         <FormRow error={errors?.email?.message}>
           <Input
-            type="text"
+            type="email"
             disabled={isLoading}
             id="email"
-            placeholder="Ваш e-mail"
+            placeholder="e-mail"
             {...register('email', {
               required: 'Поле обязательное к заполнению',
             })}
@@ -68,12 +68,17 @@ function FormFeedback() {
         </FormRow>
         <FormRow error={errors?.phone?.message}>
           <Input
-            type="text"
+            type="tel"
             disabled={isLoading}
             id="phone"
-            placeholder="Ваш номер телефона"
+            placeholder="номер телефона"
+            pattern="[0-9]{10,20}"
             {...register('phone', {
               required: 'Поле обязательное к заполнению',
+              minLength: {
+                value: 10,
+                message: 'Введен неверный формат номера',
+              },
             })}
           />
         </FormRow>
@@ -81,13 +86,14 @@ function FormFeedback() {
           <Textarea
             disabled={isLoading}
             id="message"
+            placeholder="сообщение"
             {...register('message', {
               required: 'Поле обязательное к заполнению',
             })}
           />
         </FormRow>
       </div>
-      <Button title="Добавить" disabled={isLoading} />
+      <Button title="отправить" disabled={isLoading || !isValid} />
     </StyledFormFeedback>
   );
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  width: max-content;
+  width: ${(prop) => (prop.more ? '100%' : 'max-content')};
   height: max-content;
   background-color: var(--color-dark);
   border: 1px solid var(--color-dark-grey);
@@ -10,15 +10,25 @@ const StyledButton = styled.button`
   color: var(--color-grey-white);
   text-transform: uppercase;
   transition: all 0.3s;
+  border-radius: 5px;
 
   &:hover {
     border-color: var(--color-red);
   }
+  &:active {
+    background-color: var(--color-dark-grey);
+  }
+  &:disabled {
+    background-color: var(--color-grey);
+    &:hover {
+      border-color: transparent;
+    }
+  }
 `;
 
-function Button({ onClick, title, disabled }) {
+function Button({ onClick, title, disabled, more }) {
   return (
-    <StyledButton onClick={onClick} disabled={disabled}>
+    <StyledButton onClick={onClick} disabled={disabled} more={more}>
       {title}
     </StyledButton>
   );

@@ -7,8 +7,8 @@ import ButtonLink from '../../ui/ButtonLink';
 import { useLogin } from './useLogin';
 
 function LoginForm() {
-  const [email, setEmail] = useState('ivanhotepp@gmail.com');
-  const [password, setPassword] = useState('c3po');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const { login } = useLogin();
 
   function handleSubmit(e) {
@@ -33,7 +33,6 @@ function LoginForm() {
           <Input
             type="email"
             id="email"
-            // This makes this form better for password managers
             autoComplete="username"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

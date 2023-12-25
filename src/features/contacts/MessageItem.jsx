@@ -29,7 +29,7 @@ function MessageItem({ id, name, email, phone, message, created_at }) {
       queryClient.invalidateQueries({
         queryKey: ['feedback'],
       });
-      toast.success('Запись успешно удалена');
+      toast.success('Сообщение успешно удалено');
     },
     onError: (err) => toast.error(err.message),
   });

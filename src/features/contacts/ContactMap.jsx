@@ -4,6 +4,7 @@ const StyledMap = styled.div`
   width: 100%;
   height: 250px;
   overflow: hidden;
+  border-radius: 5px;
 `;
 
 function ContactMap() {

@@ -1,13 +1,21 @@
 import supabase, { supabaseUrl } from './supabase';
+export const NEWS_SIZE = 3;
 
-export async function getNews() {
-  const { data, error } = await supabase.from('news').select('*').range(0, 10);
+export async function getNews({ page }) {
+  const from = (page - 1) * NEWS_SIZE;
+  const to = from + NEWS_SIZE - 1;
+
+  const { data, error, count } = await supabase
+    .from('news')
+    .select('*', { count: 'exact' })
+    .range(from, to)
+    .order('date', { ascending: false });
 
   if (error) {
     console.error(error);
     throw new Error('Неудачная попытка загрузки');
   }
-  return data;
+  return { data, count };
 }
 
 export const createNews = async (newNews) => {
@@ -18,7 +26,7 @@ export const createNews = async (newNews) => {
 
   const imagePath = `${supabaseUrl}/storage/v1/object/public/images-news/${imageName}`;
 
-  //создание метода
+  //создание новости
   const { data, error } = await supabase
     .from('news')
     .insert([{ ...newNews, image: imagePath }]);

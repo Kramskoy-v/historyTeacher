@@ -4,7 +4,7 @@ import SectionTitle from '../ui/SectionTitle';
 import FlexBox from '../ui/FlexBox';
 
 const Experience = styled.ul`
-  list-style-type: '⚡';
+  list-style-type: '📌';
   padding-left: 17px;
   display: flex;
   flex-direction: column;

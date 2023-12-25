@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 
 import ButtonLink from '../../ui/ButtonLink';
 import ButtonIcon from '../../ui/ButtonIcon';
-import { useLocalStorageState } from '../../hooks/useLocalStorageState';
 import { deleteMethod } from '../../services/apiMethodic';
 import Spinner from '../../ui/Spinner';
 import { useUser } from '../authentication/useUser';
@@ -17,21 +16,23 @@ const StyledMethodicItem = styled.li`
   gap: 35px;
   border: 1px solid var(--color-grey);
   position: relative;
+  border-radius: 5px;
   h2 {
     margin-bottom: 10px;
   }
 `;
 
 const Description = styled.p`
-  max-width: 730px;
   margin-bottom: 13px;
-  white-space: nowrap;
+  height: 24px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 `;
 
 function MethodicItem({ method }) {
-  const { id, title, description, image, favorites } = method;
+  const { id, title, description, image } = method;
   const { isAuthenticated } = useUser();
 
   const queryClient = useQueryClient();

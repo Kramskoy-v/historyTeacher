@@ -12,8 +12,18 @@ const StyledButtonLink = styled(Link)`
   color: var(--color-grey-white);
   text-transform: uppercase;
   transition: all 0.3s;
+  border-radius: 5px;
   &:hover {
     border-color: var(--color-red);
+  }
+  &:active {
+    background-color: var(--color-dark-grey);
+  }
+  &:disabled {
+    background-color: var(--color-grey);
+    &:hover {
+      border-color: transparent;
+    }
   }
 `;
 

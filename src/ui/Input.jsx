@@ -14,7 +14,7 @@ const Input = styled.input`
     font-size: 13px;
   }
   &:disabled {
-    background-color: var(--color-dark-grey);
+    background-color: var(--color-grey-white);
   }
   &::-webkit-calendar-picker-indicator {
     position: absolute;

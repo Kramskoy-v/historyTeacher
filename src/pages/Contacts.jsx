@@ -6,15 +6,24 @@ import ContactMap from '../features/contacts/ContactMap';
 import FormFeedback from '../features/contacts/FormFeedback';
 import MessageList from '../features/contacts/MessageList';
 import { useUser } from '../features/authentication/useUser';
+import { LinkA } from '../ui/LinkA';
 
 const GridBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-row: 1fr 1fr;
+    grid-row-gap: 40px;
+  }
   > div {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 25px;
+    @media screen and (max-width: 768px) {
+      row-gap: 15px;
+    }
   }
   address,
   > p {
@@ -55,8 +64,15 @@ function Contacts() {
 
           <address>
             394088, город Воронеж, <br />
-            улица Беговая, 146​
+            улица Беговая, 146
           </address>
+          <LinkA
+            href="https://yandex.ru/maps/-/CDqHmYKA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            посмотреть на карте
+          </LinkA>
           <div>
             <p>Телефон:&nbsp;&nbsp;+7 (473) 266‒09‒14</p>
             <p>

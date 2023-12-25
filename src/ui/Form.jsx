@@ -8,7 +8,7 @@ const Form = styled.form`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   background-color: ${(props) =>
     props.type === 'login' ? 'var(--color-dark-grey)' : 'transparent'};
-
+  border-radius: 5px;
   > div {
     display: flex;
     flex-direction: column;

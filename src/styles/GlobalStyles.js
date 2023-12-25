@@ -23,15 +23,18 @@ html {
 }
 
 body {
+
   font-family: 'Open Sans', sans-serif;
   transition: color 0.3s, background-color 0.3s;
-  min-height: 100vh;
+  min-width: 360px;
+  min-height: 100dvh;
   line-height: 1.5;
   font-size: 1.6rem;
   background-image: url('bg_full_3.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 input,
@@ -64,7 +67,7 @@ select:focus {
   outline-offset: -1px;
 }
 
-/* Parent selector, finally 😃 */
+
 button:has(svg) {
   line-height: 0;
 }
@@ -79,8 +82,6 @@ ul {
 }
 
 p,
-h1,
-h2,
 h3,
 h4,
 h5,
@@ -88,6 +89,7 @@ h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
 
 img {
   max-width: 100%;

@@ -11,6 +11,7 @@ const StyledNewsItem = styled.li`
   position: relative;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
   h2 {
     padding-right: 30px;
   }

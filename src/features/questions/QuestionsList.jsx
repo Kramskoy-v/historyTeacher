@@ -15,7 +15,7 @@ const StyledQuestionsList = styled.ul`
 function QuestionsList() {
   const [curOpen, setCurOpen] = useState(0);
 
-  const { data: questions, isLoading } = useQuery({
+  const { data: questions = [], isLoading } = useQuery({
     queryKey: ['questions'],
     queryFn: getQuestion,
   });

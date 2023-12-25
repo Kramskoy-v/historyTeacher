@@ -14,7 +14,7 @@ export const createFeedback = async (newFeedback) => {
   const { data, error } = await supabase.from('feedback').insert([newFeedback]);
   if (error) {
     console.error(error);
-    throw new Error('Неудачная попытка загрузки');
+    throw new Error('Неудачная попытка отправки');
   }
   return data;
 };

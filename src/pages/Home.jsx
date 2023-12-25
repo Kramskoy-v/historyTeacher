@@ -17,6 +17,9 @@ const Title = styled.h1`
   font-weight: 700;
   margin-bottom: 50px;
   text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
 `;
 
 const Description = styled.p`

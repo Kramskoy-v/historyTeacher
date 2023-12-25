@@ -16,10 +16,14 @@ const StyledQuestionItem = styled.li`
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   border-top: 1px solid transparent;
   border-top-color: ${(props) =>
-    props.isopen === 'true' ? 'var(--color-red)' : 'var(--color-grey)'};
+    props.open ? 'var(--color-red)' : 'var(--color-grey)'};
   border-bottom: 1px solid var(--color-grey);
   cursor: pointer;
   position: relative;
+  border-radius: 5px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
   h3 {
     font-size: 20px;
     font-weight: 500;
@@ -75,8 +79,8 @@ const QuestionItem = ({
   if (isLoading) return <Spinner />;
 
   return (
-    <StyledQuestionItem isopen={isOpen.toString()} onClick={handleToggle}>
-      <Image src="question_icon.png" alt="questionZ" />
+    <StyledQuestionItem open={isOpen} onClick={handleToggle}>
+      <Image src="question_icon.png" alt="questions icon" />
       <h3>{titleQuestion}</h3>
       <Icon>{isOpen ? '-' : '+'}</Icon>
       {isOpen && <ContentBox>{responseQuestion}</ContentBox>}

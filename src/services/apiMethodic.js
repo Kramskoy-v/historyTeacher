@@ -1,15 +1,21 @@
 import supabase, { supabaseUrl } from './supabase';
+export const METHODIC_SIZE = 10;
 
-export async function getMethodic() {
-  const { data, error } = await supabase
+export async function getMethodic({ page }) {
+  const from = (page - 1) * METHODIC_SIZE;
+  const to = from + METHODIC_SIZE - 1;
+
+  const { data, error, count } = await supabase
     .from('methodic')
-    .select('id,title, description, image', { count: 'exact' });
+    .select('id,title, description, image', { count: 'exact' })
+    .range(from, to)
+    .order('created_at', { ascending: false });
 
   if (error) {
     console.error(error);
     throw new Error('Неудачная попытка загрузки');
   }
-  return data;
+  return { data, count };
 }
 
 export const createMethod = async (newMethod) => {

@@ -4,6 +4,10 @@ const StyledFlexBox = styled.div`
   display: flex;
   width: 100%;
   column-gap: 30px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 `;
 
 const Photo = styled.div`
@@ -11,10 +15,15 @@ const Photo = styled.div`
   height: 285px;
   overflow: hidden;
   flex-shrink: 0;
+  border-radius: 5px;
   img {
-    width: 285px;
-    height: 285px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 200px;
+    height: 200px;
   }
 `;
 

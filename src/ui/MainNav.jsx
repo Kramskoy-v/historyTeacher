@@ -7,16 +7,18 @@ const StyledMainNav = styled.nav`
     display: flex;
     flex-direction: column;
     row-gap: 17px;
+    max-width: max-content;
   }
 `;
 
 const StyledNavLink = styled(NavLink)`
   display: block;
+  max-width: max-content;
+  padding-right: 32px;
   text-transform: uppercase;
   position: relative;
   font-size: 13px;
   transition: all 0.2s linear;
-  max-width: max-content;
   line-height: 1.7;
   letter-spacing: 0.3em;
 
@@ -45,12 +47,12 @@ const navLinks = [
   { name: 'Контакты', to: 'contacts' },
 ];
 
-function MainNav() {
+function MainNav({ setShowSidebar }) {
   return (
     <StyledMainNav>
       <ul>
         {navLinks.map((link) => (
-          <li key={link.to}>
+          <li key={link.to} role="button" onClick={() => setShowSidebar(false)}>
             <StyledNavLink to={link.to}>{link.name}</StyledNavLink>
           </li>
         ))}

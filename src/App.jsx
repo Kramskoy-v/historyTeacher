@@ -14,6 +14,7 @@ import Contacts from './pages/Contacts';
 import AboutMe from './pages/AboutMe';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,6 +40,7 @@ function App() {
             <Route path="questions" element={<Questions />} />
             <Route path="aboutme" element={<AboutMe />} />
             <Route path="contacts" element={<Contacts />} />
+            <Route path="privacy" element={<PrivacyPolicy />} />
           </Route>
 
           <Route path="login" element={<Login />} />
