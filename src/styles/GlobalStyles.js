@@ -55,22 +55,19 @@ button {
 
 select:disabled,
 input:disabled {
-  background-color: var(--color-grey-200);
-  color: var(--color-grey-500);
+  background-color: var(--color-grey);
+  color: var(--color-dark);
 }
 
 input:focus,
 button:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid var(--color-brand-600);
+  outline: 2px solid var(--color-grey);
   outline-offset: -1px;
 }
 
 
-button:has(svg) {
-  line-height: 0;
-}
 
 a {
   color: inherit;
@@ -81,7 +78,7 @@ ul {
   list-style: none;
 }
 
-p,
+
 h3,
 h4,
 h5,

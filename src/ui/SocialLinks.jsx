@@ -40,34 +40,34 @@ const SocialItem = styled.li`
 
 const links = [
   {
-    id: 'd45',
+    id: '1',
     title: 'Вконтакте',
     link: 'https://vk.com/ivan24645041',
     icon: 'vk_icon.png',
   },
   {
-    id: 'd5',
-    title: 'Департамент образования',
-    link: 'https://google.com',
+    id: '2',
+    title: 'Управление образования и молодежной политики',
+    link: 'https://edu-vrn.ru/',
     icon: 'dep_icon.png',
   },
   {
-    id: 'd4',
-    title: 'Бургер',
-    link: 'https://www.youtube.com',
-    icon: 'burger_icon.png',
+    id: '3',
+    title: 'Минпросвещения России',
+    link: 'https://edu.gov.ru/',
+    icon: 'pros_icon.png',
   },
   {
-    id: 'qd45',
-    title: 'Веселый череп',
-    link: 'https://vk.com/ivan24645041',
-    icon: 'skull_icon.png',
+    id: '4',
+    title: 'Банк документов',
+    link: 'https://docs.edu.gov.ru/',
+    icon: 'bank-docs_icon.png',
   },
   {
-    id: 'de45',
-    title: 'Бургер кинг',
-    link: 'https://vk.com/ivan24645041',
-    icon: 'burger_icon.png',
+    id: '5',
+    title: 'ЕГЭ',
+    link: 'https://fipi.ru/ege',
+    icon: 'ege_icon.png',
   },
 ];
 

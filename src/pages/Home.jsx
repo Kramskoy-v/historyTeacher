@@ -17,8 +17,14 @@ const Title = styled.h1`
   font-weight: 700;
   margin-bottom: 50px;
   text-transform: uppercase;
+  span {
+    hyphens: auto;
+  }
+  @media screen and (max-width: 992px) {
+    font-size: 56px;
+  }
   @media screen and (max-width: 768px) {
-    font-size: 50px;
+    font-size: 38px;
   }
 `;
 
@@ -33,12 +39,11 @@ function Home() {
   return (
     <StyledHomePage>
       <Title>
-        Привет
-        <br />Я учитель истории
+        Привет, <br /> я учитель истории <br />и <span>обществознания</span>
       </Title>
       <Description>
-        Что-то из разряда: здесь мои методические разработки,
-        <br /> инфа обо мне и бла-бла-бла
+        Здесь Вы найдете методические разработки
+        <br /> и cможете задать интересующие вопросы
       </Description>
       <BackgroundAnimation />
     </StyledHomePage>
