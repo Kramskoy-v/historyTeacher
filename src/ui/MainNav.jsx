@@ -52,7 +52,7 @@ function MainNav({ setShowSidebar }) {
     <StyledMainNav>
       <ul>
         {navLinks.map((link) => (
-          <li key={link.to} role="button" onClick={() => setShowSidebar(false)}>
+          <li key={link.to} onClick={() => setShowSidebar(false)}>
             <StyledNavLink to={link.to}>{link.name}</StyledNavLink>
           </li>
         ))}

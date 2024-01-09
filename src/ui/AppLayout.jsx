@@ -29,6 +29,9 @@ const Main = styled.main`
     width: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: var(--color-grey-white);
+    @media screen and (max-width: 992px) {
+      width: 0;
+    }
   }
   &::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);

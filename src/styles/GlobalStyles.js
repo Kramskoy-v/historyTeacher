@@ -30,11 +30,20 @@ body {
   min-height: 100dvh;
   line-height: 1.5;
   font-size: 1.6rem;
-  background-image: url('bg_full_3.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-image: url('bg_full_3-768.jpg');
+ 
+  @media screen and (min-width: 1921px) {
+    background-image: url('bg_full_3.jpg'); 
+  }
+ 
+  @media screen and (min-width: 1201px) {
+    background-image: url('bg_full_3-1920.jpg'); 
+  }
+  
 }
 
 input,

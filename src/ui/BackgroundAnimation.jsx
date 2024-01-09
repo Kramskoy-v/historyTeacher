@@ -52,15 +52,38 @@ const StyledBackgroundAnimation = styled.div`
     animation-iteration-count: infinite;
 
     &:nth-child(1) {
-      background-image: url('bg_full_1.jpg');
+      background-image: url('bg_full_1-768.jpg');
+
+      @media screen and (min-width: 1921px) {
+        background-image: url('bg_full_1.jpg');
+      }
+
+      @media screen and (min-width: 1201px) {
+        background-image: url('bg_full_1-1920.jpg');
+      }
     }
     &:nth-child(2) {
-      background-image: url('bg_full_2.jpg');
+      background-image: url('bg_full_2-768.jpg');
       animation-delay: 5s;
+
+      @media screen and (min-width: 1921px) {
+        background-image: url('bg_full_2.jpg');
+      }
+
+      @media screen and (min-width: 1201px) {
+        background-image: url('bg_full_2-1920.jpg');
+      }
     }
     &:nth-child(3) {
-      background-image: url('bg_full_3.jpg');
+      background-image: url('bg_full_3-768.jpg');
       animation-delay: 10s;
+
+      @media screen and (min-width: 1921px) {
+        background-image: url('bg_full_3.jpg');
+      }
+      @media screen and (min-width: 1201px) {
+        background-image: url('bg_full_3-1920.jpg');
+      }
     }
   }
 `;
